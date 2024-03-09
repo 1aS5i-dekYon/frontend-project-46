@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code.",
   "version": "0.1.0",
-  "description": "It is a utility that compares objects with each other",
+  "description": "This is a utility that finds differences between two files.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
