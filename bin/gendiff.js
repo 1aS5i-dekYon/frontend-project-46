@@ -13,7 +13,8 @@ gendiff
   .arguments('<filepath1> <filepath2>')
   .action((filepath1, filepath2) => {
     // console.log(`Current directory: ${cwd()}`);
-    genDiff(filepath1, filepath2);
+    const result = genDiff(filepath1, filepath2);
+    console.log(result);
   });
   
 

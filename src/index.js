@@ -26,9 +26,7 @@ const genDiff = (filepath1, filepath2) => {
         return [...acc, el];
     }, []);
     const uniqColl = v.getUniqElColl(coll);
-    const list = v.makeDiffList(uniqColl);
-    console.log(list);
-    return list;
+    return v.makeDiffList(uniqColl);
 };
 
 export { genDiff };
