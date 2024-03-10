@@ -3,6 +3,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/56d7c39feabb867cbe17/maintainability)](https://codeclimate.com/github/1aS5i-dekYon/frontend-project-46/maintainability)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/56d7c39feabb867cbe17/test_coverage)](https://codeclimate.com/github/1aS5i-dekYon/frontend-project-46/test_coverage)
+
 
 # GENDIFF!
 This is a utility that finds differences between two files.
