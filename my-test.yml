@@ -1,11 +1,9 @@
 name: my-test
 
 on:
-  push:
-    branches:
-      - '**'
-    tags:
-      - '**'
+  - push
+  - pull_request
+
 
 jobs:
   build:
