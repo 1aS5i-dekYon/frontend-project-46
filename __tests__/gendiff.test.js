@@ -33,3 +33,17 @@ test('test4: gendiff file1.json file1.json', () => {
     const result = genDiff(filepath, filepath);
     expect(result).toEqual(`{\n    follow: false\n    host: hexlet.io\n    proxy: 123.234.53.22\n    timeout: 50\n}`);
 })
+
+test('test5: gendiff file1.yml file2.yml', () => {
+    const filepath1 = getFixturePath('file1.yml');
+    const filepath2 = getFixturePath('file2.yml');
+    const result = genDiff(filepath1, filepath2);
+    expect(result).toEqual(`{\n  - follow: false\n    host: hexlet.io\n  - proxy: 123.234.53.22\n  - timeout: 50\n  + timeout: 20\n  + verbose: true\n}`);
+})
+
+test('test6: gendiff empty-file.yml file2.yml', () => {
+    const filepath1 = getFixturePath('empty-file.yml');
+    const filepath2 = getFixturePath('file2.yml');
+    const result = genDiff(filepath1, filepath2);
+    expect(result).toEqual(`{\n  + host: hexlet.io\n  + timeout: 20\n  + verbose: true\n}`);
+})

@@ -26,3 +26,6 @@ If you write `gendiff` and `filepaths of two files`,  you will get a list of dif
 
 [![gendiff with filpaths](https://asciinema.org/a/3cRvnNoajW55RCmEKskJuAri5.svg)](https://asciinema.org/a/3cRvnNoajW55RCmEKskJuAri5)
 
+You can also do this with `.yaml` and `.yml` file extension.
+
+[![gendiff wz .yaml](https://asciinema.org/a/vqLONXr9AgkWfdmrXLIBDZo5V.svg)](https://asciinema.org/a/vqLONXr9AgkWfdmrXLIBDZo5V)
