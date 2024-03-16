@@ -29,3 +29,7 @@ If you write `gendiff` and `filepaths of two files`,  you will get a list of dif
 You can also do this with `.yaml` and `.yml` file extension.
 
 [![gendiff wz .yaml](https://asciinema.org/a/vqLONXr9AgkWfdmrXLIBDZo5V.svg)](https://asciinema.org/a/vqLONXr9AgkWfdmrXLIBDZo5V)
+
+If you need to check nested files, it can do this too!
+
+[![gendiff-nested](https://asciinema.org/a/xf3K59KGWIdBuUJyxgMuFECVB.svg)](https://asciinema.org/a/xf3K59KGWIdBuUJyxgMuFECVB)
