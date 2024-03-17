@@ -5,10 +5,10 @@ const makeChildrenTree = (obj1, obj2) => {
     
     const coll = keys.map((key) => {
         if (!Object.hasOwn(obj2, key)) {
-            return { type: 'add path1', key, value: obj1[key] };
+            return { type: 'deleted', key, value: obj1[key] };
         }
         if (!Object.hasOwn(obj1, key)) {
-            return { type: 'add path2', key, value: obj2[key] };
+            return { type: 'added', key, value: obj2[key] };
         }
         const val1 = obj1[key];
         const val2 = obj2[key];

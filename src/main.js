@@ -1,7 +1,7 @@
 // import _ from 'lodash';
 import { getDataFilepath } from './parsers.js';
 import { getDiffTree } from './diff-tree.js';
-import { makeStylishFormat } from './stylish.js';
+import { getFormatData } from './formatters/index.js';
 
 const genDiff = (filepath1, filepath2, typeFormat = 'stylish') => {
     const obj1 = getDataFilepath(filepath1);
@@ -9,10 +9,7 @@ const genDiff = (filepath1, filepath2, typeFormat = 'stylish') => {
     
     const diffTree = getDiffTree(obj1, obj2);
     
-    const format = {
-        'stylish': makeStylishFormat
-    };
-    return format[typeFormat](diffTree);
+    return getFormatData(diffTree, typeFormat);
 };
 
 export { genDiff };

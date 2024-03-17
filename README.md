@@ -33,3 +33,13 @@ You can also do this with `.yaml` and `.yml` file extension.
 If you need to check nested files, it can do this too!
 
 [![gendiff-nested](https://asciinema.org/a/xf3K59KGWIdBuUJyxgMuFECVB.svg)](https://asciinema.org/a/xf3K59KGWIdBuUJyxgMuFECVB)
+
+genDiff can show the result of the difference in a flat view (text). You just need to write this entry:
+
+```
+gendiff -f plain <filepath1> <filepath2>
+```
+
+Here is the result of this command:
+
+[![asciicast](https://asciinema.org/a/iLil0qN1NKGwrJsiRwiJWCG1t.svg)](https://asciinema.org/a/iLil0qN1NKGwrJsiRwiJWCG1t)

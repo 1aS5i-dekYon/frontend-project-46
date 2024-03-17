@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals';
-import { genDiff } from '../src/index.js';
+import { genDiff } from '../src/main.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { readFileSync } from 'fs';
@@ -41,5 +41,13 @@ test('test5: gendiff file-nested1.yml file-nested2.yml', () => {
     const filepath2 = getFixturePath('file-nested2.yml');
     const expected = readFileSync(getFixturePath('result-nested'), 'utf-8');
     const result = genDiff(filepath1, filepath2);
+    expect(result).toEqual(expected);
+})
+
+test('test6: gendiff -f plain file-nested1.yml file-nested2.yml', () => {
+    const filepath1 = getFixturePath('file-nested1.yml');
+    const filepath2 = getFixturePath('file-nested2.yml');
+    const expected = readFileSync(getFixturePath('result-plain'), 'utf-8');
+    const result = genDiff(filepath1, filepath2, 'plain');
     expect(result).toEqual(expected);
 })

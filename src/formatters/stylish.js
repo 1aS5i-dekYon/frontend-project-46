@@ -7,7 +7,7 @@ const stringify = (el, depth, makeStylishFormat) => {
     return el;
   }
   const bush = Object.entries(el)
-  .map(([key, value]) => makeStylishFormat({ type: 'same', key, value }, depth + 1));
+    .map(([key, value]) => makeStylishFormat({ type: 'same', key, value }, depth + 1));
   return `{\n${bush.join('\n')}\n${indent(depth)}  }`;
 }
 
@@ -17,10 +17,10 @@ const makeStylishFormat = (el, depth = 0) => {
         const tree = el.children.flatMap((child) => makeStylishFormat(child, depth + 1));
         return `{\n${tree.join('\n')}\n}`;
       }
-      case 'add path1': {
+      case 'deleted': {
         return `${indent(depth)}- ${el.key}: ${stringify(el.value, depth, makeStylishFormat)}`;
       }
-      case 'add path2': {
+      case 'added': {
         return `${indent(depth)}+ ${el.key}: ${stringify(el.value, depth, makeStylishFormat)}`;
       }
       case 'nested': {
@@ -34,7 +34,7 @@ const makeStylishFormat = (el, depth = 0) => {
         return `${indent(depth)}- ${el.key}: ${stringify(el.val1, depth, makeStylishFormat)}\n${indent(depth)}+ ${el.key}: ${stringify(el.val2, depth, makeStylishFormat)}`;
       }
       default: {
-        return ' ';
+        throw new Error('i broke down, brah :/');
       }
     }
   };
