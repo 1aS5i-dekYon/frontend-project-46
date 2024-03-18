@@ -14,3 +14,11 @@ plugins:
 rules:
   react/jsx-uses-react: error
   react/jsx-uses-vars: error
+  consistent-return: 2
+  indent: [1, 4]
+  no-else-return: 1
+  semi: [1, "always"]
+  space-unary-ops: 2
+  no-extra-semi: 1
+  no-mixed-spaces-and-tabs: 1
+  # npx eslint -f json file1.json
