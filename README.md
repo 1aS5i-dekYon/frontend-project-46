@@ -1,9 +1,5 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/1aS5i-dekYon/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/1aS5i-dekYon/frontend-project-46/actions)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/56d7c39feabb867cbe17/maintainability)](https://codeclimate.com/github/1aS5i-dekYon/frontend-project-46/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/56d7c39feabb867cbe17/test_coverage)](https://codeclimate.com/github/1aS5i-dekYon/frontend-project-46/test_coverage)
+### Tests and linter status:
+[![Actions Status](https://github.com/1aS5i-dekYon/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/1aS5i-dekYon/frontend-project-46/actions) [![my-test](https://github.com/1aS5i-dekYon/frontend-project-46/actions/workflows/my-test.yml/badge.svg)](https://github.com/1aS5i-dekYon/frontend-project-46/actions/workflows/my-test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/56d7c39feabb867cbe17/maintainability)](https://codeclimate.com/github/1aS5i-dekYon/frontend-project-46/maintainability) [![coverage](https://github.com/1aS5i-dekYon/frontend-project-46/actions/workflows/coverage.yml/badge.svg)](https://github.com/1aS5i-dekYon/frontend-project-46/actions/workflows/coverage.yml)
 
 
 # Generate Differences!
