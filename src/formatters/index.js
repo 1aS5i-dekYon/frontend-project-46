@@ -9,6 +9,6 @@ const getFormatData = (tree, typeFormat) => {
         'json': makeJSONFormat
     };
     return format[typeFormat](tree);
-}
+};
 
 export { getFormatData };

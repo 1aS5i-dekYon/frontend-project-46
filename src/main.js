@@ -1,4 +1,3 @@
-// import _ from 'lodash';
 import { getDataFilepath } from './parsers.js';
 import { getDiffTree } from './diff-tree.js';
 import { getFormatData } from './formatters/index.js';

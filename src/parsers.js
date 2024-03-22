@@ -20,4 +20,4 @@ const getDataFilepath = (filepath) => {
     return parsers[fileExtension](fs.readFileSync(path.resolve(filepath)));
 };
 
-export { getDataFilepath }
+export { getDataFilepath };

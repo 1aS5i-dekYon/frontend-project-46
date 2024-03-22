@@ -6,7 +6,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/56d7c39feabb867cbe17/test_coverage)](https://codeclimate.com/github/1aS5i-dekYon/frontend-project-46/test_coverage)
 
 
-# GENDIFF!
+# Generate Differences!
 This is a utility that finds differences between two files.
 
 If you write `gendiff -h`, you will receive help about the gendiff utility.
@@ -42,4 +42,14 @@ gendiff -f plain <filepath1> <filepath2>
 
 Here is the result of this command:
 
-[![asciicast](https://asciinema.org/a/iLil0qN1NKGwrJsiRwiJWCG1t.svg)](https://asciinema.org/a/iLil0qN1NKGwrJsiRwiJWCG1t)
+[![gensiff-plain](https://asciinema.org/a/iLil0qN1NKGwrJsiRwiJWCG1t.svg)](https://asciinema.org/a/iLil0qN1NKGwrJsiRwiJWCG1t)
+
+If you need output in a structured format such as json. Write this entry:
+
+```
+gendiff -f json <filepath1> <filepath2>
+```
+
+Here is the result of this command:
+
+[![gendiff-json](https://asciinema.org/a/nxE4yBsNRFEUCIyMPTSBhxeaG.svg)](https://asciinema.org/a/nxE4yBsNRFEUCIyMPTSBhxeaG)
