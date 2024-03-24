@@ -1,3 +1,9 @@
+const indent = (depth, oneIndent = 4) => ' '.repeat(depth * oneIndent - 2);
+
+const makeStylishNode = (depth, symbol, key, value) => {
+    return `${depth}${symbol} ${key}: ${value}`;
+};
+
 // const makeDiffList = (coll) => {
 //     const result = coll.map((el) => {
 //         const [[, symbol], [key, value]] = Object.entries(el);
@@ -10,4 +16,4 @@
 //     return {symbol: symb, [key]: value};
 // };
 
-// export { makeDiffList, makeKeyWzSymbol };
+export { indent, makeStylishNode };

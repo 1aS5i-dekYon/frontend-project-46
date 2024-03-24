@@ -1,6 +1,5 @@
 import _ from "lodash";
-
-const indent = (depth, oneIndent = 4) => ' '.repeat(depth * oneIndent - 2);
+import { indent, makeStylishNode } from '../utils.js';
 
 const stringify = (el, depth, makeStylishFormat) => {
     if (!_.isObject(el)) {
@@ -18,20 +17,29 @@ const makeStylishFormat = (el, depth = 0) => {
         return `{\n${tree.join('\n')}\n}`;
     }
     case 'deleted': {
-        return `${indent(depth)}- ${el.key}: ${stringify(el.value, depth, makeStylishFormat)}`;
+        const value = stringify(el.value, depth, makeStylishFormat);
+        return makeStylishNode(indent(depth), '-', el.key, value);
     }
     case 'added': {
-        return `${indent(depth)}+ ${el.key}: ${stringify(el.value, depth, makeStylishFormat)}`;
+        const value = stringify(el.value, depth, makeStylishFormat);
+        return makeStylishNode(indent(depth), '+', el.key, value);
     }
     case 'nested': {
         const output = el.children.flatMap((child) => makeStylishFormat(child, depth + 1));
-        return `${indent(depth)}  ${el.key}: {\n${output.join('\n')}\n${indent(depth)}  }`;
+        const valueWzIndent = `{\n${output.join('\n')}\n${indent(depth)}  }`;
+        return makeStylishNode(indent(depth), ' ', el.key, valueWzIndent);
     }
     case 'same': {
-        return `${indent(depth)}  ${el.key}: ${stringify(el.value, depth, makeStylishFormat)}`;
+        const value = stringify(el.value, depth, makeStylishFormat);
+        return makeStylishNode(indent(depth), ' ', el.key, value);
     }
     case 'different': {
-        return `${indent(depth)}- ${el.key}: ${stringify(el.val1, depth, makeStylishFormat)}\n${indent(depth)}+ ${el.key}: ${stringify(el.val2, depth, makeStylishFormat)}`;
+        const value1 = stringify(el.val1, depth, makeStylishFormat);
+        const text1 = makeStylishNode(indent(depth), '-', el.key, value1);
+
+        const value2 = stringify(el.val2, depth, makeStylishFormat);
+        const text2 = makeStylishNode(indent(depth), '+', el.key, value2);
+        return `${text1}\n${text2}`;
     }
     default: {
         throw new Error('i broke down, brah :/');

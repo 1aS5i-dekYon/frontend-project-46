@@ -1,5 +1,5 @@
 {
-  "name": "@hexlet/code.",
+  "name": "@hexlet/code",
   "version": "0.1.0",
   "description": "This is a utility that finds differences between two files.",
   "main": "main.js",
