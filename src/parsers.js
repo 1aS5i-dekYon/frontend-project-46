@@ -17,7 +17,7 @@ const getDataFilepath = (filepath) => {
 //     .map((filepath) => fs.readFileSync(filepath))
 //     .map((filepath) => JSON.parse(filepath));
     const fileExtension = path.extname(filepath);
-    return parsers[fileExtension](fs.readFileSync(path.resolve(filepath)));
+    return parsers[fileExtension](fs.readFileSync(filepath));
 };
 
 export { getDataFilepath };
