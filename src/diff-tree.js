@@ -16,7 +16,12 @@ const makeChildrenTree = (obj1, obj2) => {
       return { type: 'nested', key, children: makeChildrenTree(val1, val2) };
     }
     if (!_.isEqual(val1, val2)) {
-      return { type: 'different', key, val1, val2 };
+      return {
+        type: 'different',
+        key,
+        val1,
+        val2,
+      };
     }
     return { type: 'same', key, value: val1 };
   });

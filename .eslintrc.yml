@@ -13,7 +13,7 @@ rules:
   no-trailing-spaces: 1
   comma-dangle: ["error", "objects": "always-multiline"]
   quote-props: ["error", "as-needed"]
-  object-curly-newline: 1
+  object-curly-newline: ["error", { "multiline": true, "minProperties": 4 } ]
   no-multiple-empty-lines: 1
   eol-last: 1
   arrow-body-style: 1
