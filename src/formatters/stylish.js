@@ -42,7 +42,8 @@ const makeStylishFormat = (el, depth = 0) => {
         return `${text1}\n${text2}`;
     }
     default: {
-        return '';
+        console.log(`${el.type} plain`);
+        throw new Error('i broke down, brah :/');
     }
     }
 };
