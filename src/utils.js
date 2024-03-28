@@ -1,7 +1,7 @@
 const indent = (depth, oneIndent = 4) => ' '.repeat(depth * oneIndent - 2);
 
 const makeStylishNode = (depth, symbol, key, value) => {
-    return `${depth}${symbol} ${key}: ${value}`;
+  return `${depth}${symbol} ${key}: ${value}`;
 };
 
 // const makeDiffList = (coll) => {
