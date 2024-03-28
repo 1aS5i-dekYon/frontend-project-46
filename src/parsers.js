@@ -5,7 +5,7 @@ import path from 'path';
 const parsers = {
   '.json': JSON.parse,
   '.yml': yaml.load,
-  '.yaml': yaml.load
+  '.yaml': yaml.load,
 };
 
 const getDataFilepath = (filepath) => {
@@ -20,4 +20,4 @@ const getDataFilepath = (filepath) => {
   return parsers[fileExtension](fs.readFileSync(filepath));
 };
 
-export { getDataFilepath };
+export default getDataFilepath;
