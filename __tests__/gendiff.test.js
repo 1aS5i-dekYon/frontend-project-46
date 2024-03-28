@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals';
-import { genDiff } from '../src/main.js';
+import genDiff from '../src/main.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { readFileSync } from 'fs';

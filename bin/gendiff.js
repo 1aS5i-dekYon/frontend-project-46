@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { genDiff } from '../src/main.js';
+import genDiff from '../src/main.js';
 import { cwd } from 'node:process';
 import path from 'path';
 import { Command } from 'commander';
