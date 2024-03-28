@@ -32,7 +32,7 @@ const makePlainFormat = (el, parentName = '') => {
         return `Property '${parentName}${el.key}' was updated. From ${getValue(el.val1)} to ${getValue(el.val2)}`;
     }
     default: {
-        throw new Error('i broke down, brah :/');
+        return '';
     }
     }
 };

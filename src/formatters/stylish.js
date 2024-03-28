@@ -42,7 +42,7 @@ const makeStylishFormat = (el, depth = 0) => {
         return `${text1}\n${text2}`;
     }
     default: {
-        throw new Error('i broke down, brah :/');
+        return '';
     }
     }
 };
