@@ -4,9 +4,9 @@ import makeJSONFormat from './json.js';
 
 const getFormatData = (tree, typeFormat) => {
   const format = {
-    'stylish': makeStylishFormat,
-    'plain': makePlainFormat,
-    'json': makeJSONFormat,
+    stylish: makeStylishFormat,
+    plain: makePlainFormat,
+    json: makeJSONFormat,
   };
   return format[typeFormat](tree);
 };

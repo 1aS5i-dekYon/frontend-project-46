@@ -6,7 +6,7 @@ const stringify = (el, depth, makeStylishFormat) => {
     return el;
   }
   const bush = Object.entries(el)
-    .map(([key, value]) => makeStylishFormat({ 'type': 'same', key, value }, depth + 1));
+    .map(([key, value]) => makeStylishFormat({ type: 'same', key, value }, depth + 1));
   return `{\n${bush.join('\n')}\n${indent(depth)}  }`;
 };
 
