@@ -51,11 +51,19 @@ test('test6: gendiff -f plain file-nested1.yml file-nested2.yml', () => {
     const result = genDiff(filepath1, filepath2, 'plain');
     expect(result).toEqual(expected);
 });
+test('test7: gendiff -f plain file-nested1.yml file-nested1.yml', () => {
+    const filepath1 = getFixturePath('file-nested1.yml');
+    const filepath2 = getFixturePath('file-nested1.yml');
+    const expected = '';
+    const result = genDiff(filepath1, filepath2, 'plain');
+    expect(result).toEqual(expected);
+});
 
-test('test7: gendiff -f join file-nested1.yml file-nested2.yml', () => {
+test('test8: gendiff -f join file-nested1.yml file-nested2.yml', () => {
     const filepath1 = getFixturePath('file-nested1.yml');
     const filepath2 = getFixturePath('file-nested2.yml');
     const expected = readFileSync(getFixturePath('result-json'), 'utf-8');
     const result = genDiff(filepath1, filepath2, 'json');
     expect(result).toEqual(expected);
 });
+

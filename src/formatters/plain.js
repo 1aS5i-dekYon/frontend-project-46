@@ -13,7 +13,13 @@ const getValue = (value) => {
 const makePlainFormat = (el, parentName = '') => {
     switch (el.type) {
     case 'root': {
-        const tree = el.children.flatMap((child) => makePlainFormat(child, el.key));
+        const tree = el.children
+            .filter((child) => child.type !== 'same')
+            .flatMap((child) => makePlainFormat(child, el.key))
+            .filter((child) => child !== '');
+        if (tree.length === 0) {
+            return '';
+        }
         return tree.join('\n');
     }
     case 'deleted': {
@@ -26,13 +32,15 @@ const makePlainFormat = (el, parentName = '') => {
         const output = el.children
             .filter((child) => child.type !== 'same')
             .flatMap((child) => makePlainFormat(child, `${parentName}${el.key}.`));
+        if (output === '') {
+            return '';
+        }
         return output.join('\n');
     }
     case 'different': {
         return `Property '${parentName}${el.key}' was updated. From ${getValue(el.val1)} to ${getValue(el.val2)}`;
     }
     default: {
-        console.log(`${el.type} plain`);
         throw new Error('i broke down, brah :/');
     }
     }
